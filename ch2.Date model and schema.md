@@ -117,6 +117,7 @@ Each component of the schema (like a table or a field) is called a **schema cons
 * It **changes frequently** — every time data is added, updated, or deleted.
 
 📌 Think of it like the **furniture and people currently inside the building** (which can change), while the walls and rooms (the schema) stay mostly the same.
+
 ---
 
 
