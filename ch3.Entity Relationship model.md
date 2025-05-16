@@ -185,6 +185,7 @@ This shows **how many instances** of one entity can be associated with how many 
 * An EMPLOYEE can work on **1 to many** PROJECTS.
 * A PROJECT can have **1 to many** EMPLOYEES.
 
-![image](https://github.com/user-attachments/assets/fd7e4572-9fe6-4e17-a9f3-fdb1269915bc)
+![image](https://github.com/user-attachments/assets/94ae2a7d-0691-481a-b54b-33ec7f2a3336)
+
 
 ---
