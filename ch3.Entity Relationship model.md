@@ -64,7 +64,7 @@ Each attribute is represented as an **oval** in an ER diagram and connected to i
 
 ---
 
-### 4. **Multi-Valued Attribute**
+### 3. **Multi-Valued Attribute**
 
 * Can hold multiple values.
 * Example: `PhoneNumbers`
@@ -75,7 +75,7 @@ Each attribute is represented as an **oval** in an ER diagram and connected to i
 
 ---
 
-### 5. **Derived Attribute**
+### 4. **Derived Attribute**
 
 * **Derived**: Calculated from stored data (e.g., `Area` from `Radius`)
 
@@ -85,7 +85,7 @@ Each attribute is represented as an **oval** in an ER diagram and connected to i
 
 ---
 
-### 6. **Complex Attribute**
+### 5. **Complex Attribute**
 
 * An attribute that is **composite + multi-valued**.
 * Example: `Address` can have multiple values and each with components.
@@ -95,7 +95,7 @@ Each attribute is represented as an **oval** in an ER diagram and connected to i
 
 ---
 
-## 🔶 3. **Key Attribute**
+## 🔶 6. **Key Attribute**
 
 * Uniquely identifies each entity.
 * Example: `SSN` for EMPLOYEE.
@@ -104,11 +104,8 @@ Each attribute is represented as an **oval** in an ER diagram and connected to i
 
 📍 **ER Symbol**: Underlined attribute
 
-```
-EMPLOYEE
-   |
-   o--- SSN  ← Underlined
-```
+![image](https://github.com/user-attachments/assets/bf697e5c-b7e4-4f65-9725-abdbd920261f)
+
 
 ---
 
@@ -124,14 +121,8 @@ EMPLOYEE
 
 📍 **ER Symbol**:
 
-* Double rectangle for weak entity
-* Double diamond for identifying relationship
-* Partial key (dashed underline)
+![image](https://github.com/user-attachments/assets/041f2074-5450-469d-9d91-4e01f31082b1)
 
-```
-EMPLOYEE ──<<Identifies>>── DEPENDENT
-           (strong)           (weak)
-```
 
 ---
 
@@ -149,7 +140,10 @@ A relationship connects two or more entities.
 
 * Example: `DOCTOR prescribes MEDICINE to PATIENT`
 
-📍 **ER Symbol**: Diamond
+📍 **ER Symbol**: 
+
+![image](https://github.com/user-attachments/assets/f0fa8e0b-ef8e-46fe-880c-0bf1767f0b82)
+
 
 ---
 
@@ -158,11 +152,8 @@ A relationship connects two or more entities.
 * An entity relates to itself.
 * Example: An **EMPLOYEE supervises another EMPLOYEE**
 
-📍 Visual:
+![image](https://github.com/user-attachments/assets/21e7dd63-a9a4-4a4f-a36a-5807a48fbb3b)
 
-```
-EMPLOYEE ── supervises ──> EMPLOYEE
-```
 
 ---
 
@@ -192,42 +183,8 @@ This shows **how many instances** of one entity can be associated with how many 
 ### Example:
 
 * An EMPLOYEE can work on **1 to many** PROJECTS.
-* A PROJECT can have **0 to many** EMPLOYEES.
+* A PROJECT can have **1 to many** EMPLOYEES.
 
-📍 Notation:
-
-```
-EMPLOYEE ──(1,N)── works_on ──(0,N)── PROJECT
-```
+![image](https://github.com/user-attachments/assets/fd7e4572-9fe6-4e17-a9f3-fdb1269915bc)
 
 ---
-
-### 🔚 Summary Diagram
-
-```
-                 +--------------------+
-                 |     EMPLOYEE       |
-                 +--------------------+
-                 | - SSN (Key)        |
-                 | - Name             |
-                 | - PhoneNumbers{}   | ← Multi-valued
-                 | - BirthDate        |
-                 | - Age (derived)    |
-                 +--------------------+
-                        |
-             +----------+----------+
-             |                     |
-     Works_on (1,N)          Supervises (recursive)
-             |                     |
-       +-----------+        (Employee again)
-       | PROJECT   |
-       +-----------+
-
-     DEPENDENT (weak entity)
-           |
-     Identified by EMPLOYEE
-```
-
----
-
-If you'd like, I can also generate an image of this ER diagram to visualize all these concepts. Would you like that?
