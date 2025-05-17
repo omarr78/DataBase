@@ -82,6 +82,21 @@ Let’s take a **STUDENT** table (relation):
 If there’s an `ENROLLMENT` table that uses `StudentID` from the `STUDENT` table, that `StudentID` must exist in the STUDENT table.
 
 ---
+### 5. **Relational Database Schema**
+* A set S of relation schemas that belong to the
+same database.
+S is the name of the whole database schema
+S = {RI, R2, ..., Rn}
+R1,R2,...,Rn are the names of the individual
+relation schemas within the database S
+
+![Relational Database Schema](https://github.com/user-attachments/assets/769a5549-c871-494a-8ded-00964369c191)
+
+---
+### 6. **Displaying a relational database Schema and its constraint**
+![image](https://github.com/user-attachments/assets/c6635878-cd04-41d5-94b6-756dfcf2ecbd)
+
+---
 
 ## 🧠 Summary
 
