@@ -116,3 +116,10 @@ If only some employees have parking spots → add FK in `PARKING_SPOT`
 | Relationship Attributes | Add them to the table holding the FK               |
 
 ---
+![ER diagram](https://github.com/user-attachments/assets/3abfbd12-85e9-4f74-89ce-bcae9c6f614b)
+
+
+![image](https://github.com/user-attachments/assets/c6635878-cd04-41d5-94b6-756dfcf2ecbd)
+---
+
+---
