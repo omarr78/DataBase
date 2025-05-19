@@ -113,6 +113,9 @@ There are **two main constraints**:
 
 📌 Example:
 
+![disjoint specialization](https://github.com/user-attachments/assets/201276c0-3a31-429a-939a-888e141b40b6)
+
+
 * If an `EMPLOYEE` is a `SECRETARY`, they **cannot** be a `TECHNICIAN` or `ENGINEER`.
 
 #### ➤ Overlapping (Symbol: **`o`**)
@@ -121,26 +124,25 @@ There are **two main constraints**:
 
 📌 Example:
 
-* An `EMPLOYEE` can be both a `MANAGER` and an `ENGINEER`.
+![overlapping specialization](https://github.com/user-attachments/assets/a72cf2b7-2f8b-4ecd-a3e2-22d3c77808c1)
+
+* An `PART` can be both a `MANUFACTURED_PART` and an `PURCHASED_PART`.
 
 ---
 
 ### 🔸 B. Completeness Constraint
 
+![completeness constraint](https://github.com/user-attachments/assets/f8e7bd66-6ffb-4a72-b7d5-a80057ef84f1)
+
+
 #### ➤ Total Specialization (Double Line)
 
-* Every entity in the superclass **must belong to at least one subclass**.
-
-📌 Example:
-
-* Every `PART` must be either a `MANUFACTURED_PART`, `PURCHASED_PART`, or both.
+* every entity in the superclass **must be a member of some subclass** in the specialization/generalization.
+* `EMPLOYEE` must be `SALARIED_EMPLOYEE` or `HOURLY_EMPLOYEE`
 
 #### ➤ Partial Specialization (Single Line)
 
 * Some entities in the superclass may **not belong to any subclass**.
-
-📌 Example:
-
 * Some `EMPLOYEE`s may not be `MANAGER`, `ENGINEER`, or `SECRETARY`.
 
 ---
@@ -168,41 +170,19 @@ There are **two main constraints**:
 📌 Example:
 
 ```
-    HOURLY_EMPLOYEE     ENGINEER
+       EMPLOYEE           STUDENT 
            \                /
             \              /
-            SALARIED_ENGINEER
+            STUDENT_ASSISTANT
 ```
 
----
-
-## 🔚 **Summary Table**
-
-| Term           | Meaning                                                   |
-| -------------- | --------------------------------------------------------- |
-| Superclass     | General entity (parent)                                   |
-| Subclass       | Specific entity (child)                                   |
-| Specialization | Break down superclass into subclasses                     |
-| Generalization | Combine similar subclasses into one superclass            |
-| Disjointness   | Controls if entities can be in multiple subclasses        |
-| Completeness   | Controls if all superclass entities must be in a subclass |
-| Hierarchy      | One parent per subclass (single inheritance)              |
-| Lattice        | Subclass can have multiple parents (multiple inheritance) |
+![Hierarchy   Lattices](https://github.com/user-attachments/assets/17369a4c-6f36-4606-a802-9deca090c974)
 
 ---
+## ✅ **6. Categories (UNION TYPES) (Symbol: **`U`**)**
 
-## ✅ Visual Example (Text Version)
+* In some cases, we need to model a single superclass/subclass relationship with more than one superclass
+* Superclasses can represent different entity types
+* Such a subclass is called a category or UNION TYPE
 
-```
-                      EMPLOYEE
-                  /     |     |     \
-         SECRETARY  ENGINEER  MANAGER  TECHNICIAN
-```
-
-* You decide if it’s disjoint or overlapping.
-* You decide if it’s total or partial specialization.
-
----
-
-Let me know if you want this converted to a **relational schema** or need a **practice question**!
-
+![image](https://github.com/user-attachments/assets/48db49b0-9642-472c-9dbd-0fae62f5d720)
