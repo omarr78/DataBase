@@ -128,5 +128,3 @@ Behind the scenes, the **DBMS** is:
 * Keeping everything safe and efficient
 
 ---
-
-Would you like a visual diagram or flowchart of this system as well?
